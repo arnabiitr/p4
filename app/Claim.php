@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Claim extends Model
 {
 
-    public function getId() {
+   public function getId() {
         return $this->id;
     }
 
@@ -17,9 +17,7 @@ class Claim extends Model
     }
 
 
-
-
-    public function member() {
-        return $this->belongsTo('App\Member');
+    public function members() {
+        return $this->belongsTo('App\Member','member_id');
     }
 }

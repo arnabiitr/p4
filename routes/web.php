@@ -36,30 +36,47 @@ Route::get('/', 'WelcomeController');
 /**
  * Books
  */
-Route::get('/books/search', 'BookController@search');
-Route::get('/books/search-process', 'BookController@searchProcess');
+Route::get('/members/search', 'MemberController@search');
+Route::get('/claims/search', 'ClaimController@search');
+
+Route::get('/members/search-process', 'MemberController@searchProcess');
+Route::get('/claims/search-process', 'ClaimController@searchProcess');
 
 # CREATE
-Route::get('/books/create', 'BookController@create');
-Route::post('/books', 'BookController@store');
+Route::get('/members/create', 'MemberController@create');
+Route::get('/claims/create', 'ClaimController@create');
+
+Route::post('/members', 'MemberController@store');
+Route::post('/claims', 'ClaimController@store');
+
 
 # SHOW
-Route::get('/books/{id}', 'BookController@show');
-Route::get('/books', 'BookController@index');
+Route::get('/members/{id}', 'MemberController@show');
+Route::get('/claims/{id}', 'ClaimController@show');
+
+
+Route::get('/members', 'MemberController@index');
+Route::get('/claims', 'ClaimController@index');
 
 # EDIT
-# Show the form to edit a specific book
-Route::get('/books/{id}/edit', 'BookController@edit');
+# Show the form to edit a specific member
 
-# Process the form to edit a specific book
-Route::put('/books/{id}', 'BookController@update');
+Route::get('/members/{id}/edit', 'MemberController@edit');
+Route::get('/claims/{id}/edit', 'ClaimController@edit');
+
+
+# Process the form to edit a specific member
+Route::put('/members/{id}', 'MemberController@update');
+Route::put('/claims/{id}', 'ClaimController@update');
 
 # DELETE
 # Show the page to confirm deletion of a book
-Route::get('/books/{id}/delete', 'BookController@delete');
+Route::get('/members/{id}/delete', 'MemberController@delete');
+Route::get('/claims/{id}/delete', 'ClaimController@delete');
 
 # Process the deletion of a book
-Route::delete('/books/{id}', 'BookController@destroy');
+Route::delete('/members/{id}/delete', 'MemberController@destroy');
+Route::delete('/claims/{id}/delete', 'ClaimController@destroy');
 
 
 /**

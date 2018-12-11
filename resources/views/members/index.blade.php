@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    All books
+    All members
 @endsection
 
 @push('head')
@@ -14,7 +14,7 @@
         <h2>Recently added members</h2>
         <ul>
             @foreach($newMembers as $member)
-                <li>{{ $member->title }}</li>
+                <li>{{ $member->first_name }}</li>
             @endforeach
         </ul>
     </section>
@@ -22,7 +22,7 @@
     <section id='allBooks'>
         <h2>All Members</h2>
         @foreach($members as $member)
-            @include('books._book')
+            @include('members._member')
         @endforeach
     </section>
 @endsection
