@@ -3,12 +3,13 @@
 return [
 
     'nav' => [
-        '/books' => 'Books',
-        '/books/create' => 'Add a book',
-        '/books/search' => 'Search',
-        '/practice' => 'Practice',
-        '/about' => 'About',
-        '/contact' => 'Contact',
+        '/members' => 'Members',
+        '/members/create' => 'Add Member',
+        '/members/search' => 'Search Members',
+        '/claims' => 'All Claims',
+        '/claims/create' => 'Add a claim',
+    	'/claims/search' => 'Search Claims'
+
     ],
 
     /*
