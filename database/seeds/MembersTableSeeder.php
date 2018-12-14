@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Member;
-use App\Claim;
+
 
 class MembersTableSeeder extends Seeder
 {

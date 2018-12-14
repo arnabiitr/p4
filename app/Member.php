@@ -12,6 +12,10 @@ class Member extends Model
         return $this->hasMany('App\Claim');
     }
 
+    public function treatments() {
+        return $this->belongsToMany('App\Treatment')->withTimestamps();
+    }
+
     public static function getForDropdown()
     {
         return self::orderBy('last_name')->select(['id', 'first_name', 'last_name'])->get();
