@@ -11,8 +11,11 @@
     <form method='GET' action='/members/search-process'>
 
         <fieldset>
-            <label for='searchTerm'>Search by first name</label>
+            <label for='searchTerm'>* Search by first name(One field is atleast required)</label>
             <input type='text' name='searchTerm' id='searchTerm' value='{{ $searchTerm }}'>
+
+            <label for='searchTerm1'>Search by last name</label>
+            <input type='text' name='searchTerm1' id='searchTerm1' value='{{ $searchTerm1 }}'>
 
             <input type='checkbox' name='caseSensitive' {{ ($caseSensitive) ? 'checked' : '' }}>
             <label>case sensitive</label>
@@ -22,17 +25,23 @@
 
     </form>
 
-    @if($searchTerm)
-        <h2>Results for query: <em>{{ $searchTerm }}</em></h2>
+    @if($searchTerm ||$searchTerm1)
+        <h2>Results for query: <em>{{ $searchTerm }}{{ $searchTerm1 }}</em></h2>
 
         @if(count($searchResults) == 0)
             No matches found.
         @else
-            @foreach($searchResults as $title => $member)
+            @foreach($searchResults as $membername => $member)
                 <div class='book'>
-                    <h3>{{ $title }}</h3>
-                    <h4>{{ $member['author'] }}</h4>
-                    <img src='{{ $member['cover_url'] }}' alt='Cover image for the book {{ $title }}'>
+                    <h3>member_id : {{ $member->id}}</h3>
+                    <h4>first name :{{ $member->first_name }}</h4>
+                    <h4>las name :  {{ $member->last_name}}</h4>
+                    <h4>Address:  {{ $member->address}}</h4>
+                    @foreach (($member->claim) as $claimobject)
+                        <li>Claim #{{ $claimobject->id}}</li>
+                    @endforeach
+
+
                 </div>
             @endforeach
         @endif

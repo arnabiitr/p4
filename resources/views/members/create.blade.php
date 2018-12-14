@@ -56,6 +56,15 @@
         @include('modules.field-error', ['field' => 'address'])
 
 
+        <label>Treatments</label>
+        <ul class='checkboxes'>
+            @foreach($treatments as $treatmentId => $treatmentName)
+                <li><label><input {{ (in_array($treatmentId, old('treatments', []))) ? 'checked' : '' }}
+                                  type='checkbox'
+                                  name='treatments[]'
+                                  value='{{ $treatmentId }}'> {{ $treatmentName }}</label></li>
+            @endforeach
+        </ul>
 
         <input type='submit' value='Add' class='btn btn-primary'>
     </form>

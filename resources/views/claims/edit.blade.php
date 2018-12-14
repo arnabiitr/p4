@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Edit {{$claim->id}}
+    Edit Claim # {{$claim->id}}
 @endsection
 
 @section('content')
@@ -12,11 +12,11 @@
         </div>
     @endif
 
-    <h1>Edit {{ $claim->id }}</h1>
-    <h1>Edit {{ $claim->diagnosis_code }}</h1>
+    <h1>Edit Claim #{{ $claim->id }}</h1>
+
 
     <form method='POST' action='/claims/{{ $claim->id }}'>
-        <div class='details'>* Required fields</div>
+
 
         {{ method_field('put') }}
         {{ csrf_field() }}
@@ -33,10 +33,14 @@
             <select name='member_id'>
                 <option value=''>Choose one...</option>
                 @foreach($members as $member)
-                    <option value='{{ $member->id }}' {{ (old('member_id') == $member->id) ? 'selected' : '' }}>{{ $member->first_name.' '.$member->last_name.' ('.$member->id .')'}}</option>
+                    {{--<option value='{{ $member->id }}' {{ (old('member_id') == $member->id) ? 'selected' : '' }} > {{ $member->first_name.' '.$member->last_name.' ('.$member->id .')'}}</option>--}}
+
+                    <option value='{{ $member->id }}' {{ $claim->member_id == $member->id ? 'selected' : '' }} >{{ $member->first_name.' '.$member->last_name.' ('.$member->id .')'}}</option>
+
                 @endforeach
             </select>
             @include('modules.field-error', ['field' => 'member_id'])
+
 
             <label for='total_amount'>* Total Claim Amount </label>
             <input type='text' name='total_amount' id='total_amount' value='{{ old('total_amount',$claim->total_amount)}}'>

@@ -8,10 +8,10 @@
 @section('content')
     <h1>Search</h1>
 
-    <form method='GET' action='/books/search-process'>
+    <form method='GET' action='/claims/search-process'>
 
         <fieldset>
-            <label for='searchTerm'>Search by title:</label>
+            <label for='searchTerm'>Search by Diagnosis Code:</label>
             <input type='text' name='searchTerm' id='searchTerm' value='{{ $searchTerm }}'>
 
             <input type='checkbox' name='caseSensitive' {{ ($caseSensitive) ? 'checked' : '' }}>
@@ -28,11 +28,10 @@
         @if(count($searchResults) == 0)
             No matches found.
         @else
-            @foreach($searchResults as $title => $book)
+            @foreach($searchResults as $title => $claim)
                 <div class='book'>
-                    <h3>{{ $title }}</h3>
-                    <h4>by {{ $book['author'] }}</h4>
-                    <img src='{{ $book['cover_url'] }}' alt='Cover image for the book {{ $title }}'>
+                    <p>Claim Details {{ $claim['diagnosis_code'] }}  ({{ $claim['total_amount']}})</p>
+
                 </div>
             @endforeach
         @endif
