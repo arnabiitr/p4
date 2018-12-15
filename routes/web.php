@@ -7,14 +7,6 @@ Route::get('/debug', function () {
         'Database defaultStringLength' => Illuminate\Database\Schema\Builder::$defaultStringLength,
     ];
 
-    /*
-    The following commented out line will print your MySQL credentials.
-    Uncomment this line only if you're facing difficulties connecting to the
-    database and you need to confirm your credentials. When you're done
-    debugging, comment it back out so you don't accidentally leave it
-    running on your production server, making your credentials public.
-    */
-    #$debug['MySQL connection config'] = config('database.connections.mysql');
 
     try {
         $databases = DB::select('SHOW DATABASES;');
@@ -34,7 +26,7 @@ Route::get('/', 'WelcomeController');
 
 
 /**
- * Books
+ * members and claims
  */
 Route::get('/members/search', 'MemberController@search');
 Route::get('/claims/search', 'ClaimController@search');
@@ -59,24 +51,24 @@ Route::get('/members', 'MemberController@index');
 Route::get('/claims', 'ClaimController@index');
 
 # EDIT
-# Show the form to edit a specific member
+# Show the form to edit a specific members and claims
 
 Route::get('/members/{id}/edit', 'MemberController@edit');
 Route::get('/claims/{id}/edit', 'ClaimController@edit');
 
 
-# Process the form to edit a specific member
+# Process the form to edit a specific members and claims
 Route::put('/members/{id}', 'MemberController@update');
 Route::put('/claims/{id}', 'ClaimController@update');
 
 # DELETE
-# Show the page to confirm deletion of a book
+# Show the page to confirm deletion of  members and claims
 Route::get('/members/{id}/delete', 'MemberController@delete');
 Route::get('/claims/{id}/delete', 'ClaimController@delete');
 
-# Process the deletion of a book
-Route::delete('/members/{id}/delete', 'MemberController@destroy');
-Route::delete('/claims/{id}/delete', 'ClaimController@destroy');
+# Process the deletion of a members and claims
+Route::delete('/members/{id}', 'MemberController@destroy');
+Route::delete('/claims/{id}', 'ClaimController@destroy');
 
 
 /**
@@ -92,8 +84,3 @@ Route::any('/practice/{n?}', 'PracticeController@index');
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');
 
-
-# Example shown at the end of Week 6's lectures
-# to discuss the kind of planning work you can do for Project 3
-//Route::get('/', 'TriviaController@index');
-//Route::get('/check-answer', 'TriviaController@checkAnswer');

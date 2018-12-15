@@ -107,7 +107,7 @@ class MemberController extends Controller
     public function create(Request $request)
     {
         $treatments= Treatment::getForCheckboxes();
-        //dump($treatments);
+
         return view('members.create')->with([
 
             'treatments' => $treatments
@@ -146,7 +146,7 @@ class MemberController extends Controller
         $member->save();
 
         # Note: Have to sync treatments *after* the member has been saved so there's a member_id to store in the pivot table
-         dump($request->treatments);
+       //  dump($request->treatments);
 
          $member->treatments()->sync($request->treatments);
 
@@ -199,11 +199,8 @@ class MemberController extends Controller
         $member = Member::find($id);
         $member->first_name = $request->first_name;
 
-        # Approach 1 - Using a relationship method
-        //$author = Author::find($request->author_id);
-        //$member->author()->associate($author);
         $member->treatments()->sync($request->treatments);
-        # Approach 2 - Manually setting the FK (more efficient)
+
         $member->last_name = $request->last_name;
 
         $member->ssn= $request->ssn;
@@ -243,7 +240,11 @@ class MemberController extends Controller
     {
         $member = Member::find($id);
 
+        $member->claim()->delete();
+
         $member->treatments()->detach();
+
+
 
         $member->delete();
 

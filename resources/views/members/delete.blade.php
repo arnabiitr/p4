@@ -5,24 +5,24 @@
 @endpush
 
 @section('title')
-    Confirm deletion: {{ $members->title }}
+    Confirm deletion: {{ $member->id }}
 @endsection
 
 @section('content')
     <h1>Confirm deletion</h1>
 
-    <p>Are you sure you want to delete <strong>{{ $book->title }}</strong>?</p>
+    <p>Are you sure you want to delete <strong>{{ $member->id }}</strong>?</p>
 
-    <img src='{{ $book->cover_url }}' class='cover' alt='Cover image for {{ $book->title }}'>
 
-    <form method='POST' action='/members/{{ $book->id }}'>
+
+    <form method='POST' action='/members/{{ $member->id }}'>
         {{ method_field('delete') }}
         {{ csrf_field() }}
         <input type='submit' value='Yes, delete it!' class='btn btn-danger btn-small'>
     </form>
 
     <p class='cancel'>
-        <a href='/members/{{ $members->id }}'>No, I changed my mind.</a>
+        <a href='/members/{{ $member->id }}'>No, I changed my mind.</a>
     </p>
 
 @endsection

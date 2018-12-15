@@ -60,16 +60,13 @@ class ClaimController extends Controller
      */
     public function searchProcess(Request $request)
     {
-        # Start with an empty array of search results; members that
-        # match our search query will get added to this array
+
         $searchResults = [];
 
-        # Store the searchTerm in a variable for easy access
-        # The second parameter (null) is what the variable
-        # will be set to *if* searchTerm is not in the request.
+
         $searchTerm = $request->input('searchTerm', null);
 
-        # Only try and search *if* there's a searchTerm
+
         if ($searchTerm) {
 
                 # If it was a match, add it to our results
@@ -130,7 +127,7 @@ class ClaimController extends Controller
     }
 
     /*
-    * GET /members/{id}/edit
+    * GET /claims/{id}/edit
     */
     public function edit($id)
     {
@@ -180,24 +177,24 @@ class ClaimController extends Controller
     }
 
     /*
-   * Asks user to confirm they actually want to delete the member
+   * Asks user to confirm they actually want to delete the claim
    * GET /claims/{id}/delete
    */
     public function delete($id)
     {
-        $member = Claim::find($id);
+        $claim= Claim::find($id);
 
-        if (!$member) {
+        if (!$claim) {
             return redirect('/claims')->with('alert', 'claim not found');
         }
 
-        return view('claim.delete')->with([
+        return view('claims.delete')->with([
             'claim' => $claim,
         ]);
     }
 
     /*
-    * Actually deletes the member
+    * Actually deletes the claim
     * DELETE /claims/{id}/delete
     */
     public function destroy($id)
