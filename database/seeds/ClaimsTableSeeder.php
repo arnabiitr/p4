@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\old;
+use App\Claim;
 
 class ClaimsTableSeeder extends Seeder
 {
@@ -24,7 +24,7 @@ class ClaimsTableSeeder extends Seeder
 
         # Loop through each claim, adding them to the database
         foreach ($claims as $claimData) {
-            $claim = new old();
+            $claim = new Claim();
 
             $claim->created_at = Carbon\Carbon::now()->subDays($count)->toDateTimeString();
             $claim->updated_at = Carbon\Carbon::now()->subDays($count)->toDateTimeString();
