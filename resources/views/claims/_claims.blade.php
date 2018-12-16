@@ -1,4 +1,4 @@
-<div class='book cf'>
+<div class='member cf'>
     <a href='/claims/{{$claim->id }}'><h3>Claim Id#{{ $claim->id }}</h3></a>
     <ul>
 

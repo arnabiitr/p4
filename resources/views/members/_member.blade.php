@@ -1,4 +1,4 @@
-<div class='book cf'>
+<div class='member cf'>
     <a href='/members/{{ $member->id }}'><h3>{{ $member->first_name }}</h3></a>
     <ul>
 

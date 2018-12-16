@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @push('head')
-    <link href='/css/books/delete.css' rel='stylesheet'>
+    <link href='/css/members/delete.css?12345' rel='stylesheet'>
 @endpush
 
 @section('title')

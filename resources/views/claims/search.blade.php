@@ -29,7 +29,7 @@
             No matches found.
         @else
             @foreach($searchResults as $title => $claim)
-                <div class='book'>
+                <div class='member'>
                     <p>Claim Details {{ $claim['diagnosis_code'] }}  ({{ $claim['total_amount']}})</p>
 
                 </div>

@@ -5,12 +5,12 @@
 @endsection
 
 @push('head')
-    <link href='/css/books/index.css' rel='stylesheet'>
-    <link href='/css/books/_book.css' rel='stylesheet'>
+    <link href='/css/members/index.css?12345' rel='stylesheet'>
+    <link href='/css/members/_members.css?12345' rel='stylesheet'>
 @endpush
 
 @section('content')
-    <section id='newBooks'>
+    <section id='newMembers'>
         <h2>Recently added members</h2>
         <ul>
             @foreach($newMembers as $member)
@@ -19,7 +19,7 @@
         </ul>
     </section>
 
-    <section id='allBooks'>
+    <section id='allMembers'>
         <h2>All Members</h2>
         @foreach($members as $member)
             @include('members._member')

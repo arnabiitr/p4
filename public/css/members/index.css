@@ -2,11 +2,12 @@ section {
     margin-bottom: 45px;
 }
 
-#newBooks {
+#newMembers {
     background-color: lightyellow;
     padding: 10px;
 }
 
-#newBooks ul {
+#newMembers ul {
     list-style-type: none;
 }
+

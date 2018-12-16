@@ -1,4 +1,4 @@
-.book {
+.member {
     padding: 10px;
     width: 100%;
     margin-bottom: 20px;
@@ -6,7 +6,7 @@
     border: 0;
 }
 
-.book h2 {
+.member h2 {
     font-size: 1.3em;
     margin: 4px 0 4px 0;
     font-style: italic;
@@ -29,15 +29,15 @@
     margin-right: 10px;
 }
 
-.bookActions {
+.memberActions {
     list-style-type: none;
 }
 
-.bookActions li {
+.memberActions li {
     display: inline-block;
 }
 
-.bookActions li a {
+.memberActions li a {
     text-decoration: none;
     padding-right: 20px;
 }

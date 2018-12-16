@@ -1,4 +1,4 @@
-.book {
+.member {
     padding: 10px;
     width: 100%;
     margin-bottom: 20px;
@@ -6,14 +6,14 @@
     border: 1px solid #eee;
 }
 
-.book h2 {
+.member h2 {
     font-size: 1.3em;
     margin: 4px 0 4px 0;
     font-style: italic;
     text-align: left;
 }
 
-.book ul {
+.member ul {
     list-style-type: none;
 }
 

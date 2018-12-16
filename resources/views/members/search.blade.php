@@ -32,7 +32,7 @@
             No matches found.
         @else
             @foreach($searchResults as $membername => $member)
-                <div class='book'>
+                <div class='member'>
                     <h3>member_id : {{ $member->id}}</h3>
                     <h4>first name :{{ $member->first_name }}</h4>
                     <h4>las name :  {{ $member->last_name}}</h4>
