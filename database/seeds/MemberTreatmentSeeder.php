@@ -14,9 +14,8 @@ class MemberTreatmentSeeder extends Seeder
     public function run()
     {
         $membertreatment = [
-            'Arnab1' => ['Therapy', 'Surgery'],
-            'Arit' => ['Surgery', 'Alternative medicine', 'Enzyme inhibitor', 'Therapy'],
-            'Arnab12' => ['Invasive','Surgery']
+            'Arnab' => ['Therapy', 'Surgery'],
+            'Arit' => ['Surgery', 'Alternative medicine', 'Enzyme inhibitor', 'Therapy']
         ];
 
         # Now loop through the above array, creating a new pivot for each book to tag
@@ -26,7 +25,7 @@ class MemberTreatmentSeeder extends Seeder
 
             # Now loop through each tag for this book, adding the pivot
             foreach ($treatmentnames as $treatname) {
-                $treatment = Treatment::where('treatmentname', 'LIKE', $treatname)->first();
+                $treatment = Treatment::where('treatmentname', 'like', $treatname)->first();
 
                 # Connect this tag to this book
                 $member->treatments()->save($treatment);

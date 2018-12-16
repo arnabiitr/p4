@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\old;
+use App\Claim;
+use App\Member;
 
 class ClaimsTableSeeder extends Seeder
 {
@@ -14,21 +15,23 @@ class ClaimsTableSeeder extends Seeder
     {
         # Array of claim data to add
         $claims = [
-            [1, 'ABC', 5000, 300,0],
-            [1, 'CD', 5001, 301,0],
-            [2, 'EF', 5001, 301,1],
-            [2, 'GH', 5001, 301,2],
-            [2, 'AD', 5001, 301,3]
+            ['Arit', 'ABC', 5000, 300,0],
+            ['Arit', 'CD', 5001, 301,0],
+            ['Arnab', 'EF', 5001, 301,1],
+            ['Arnab', 'GH', 5001, 301,2],
+            ['Arnab', 'AD', 5001, 301,3]
         ];
         $count = count($claims);
 
         # Loop through each claim, adding them to the database
         foreach ($claims as $claimData) {
-            $claim = new old();
+            $claim = new Claim();
+
+            $member = Member::where('first_name', 'like', $claimData[0])->first();
 
             $claim->created_at = Carbon\Carbon::now()->subDays($count)->toDateTimeString();
             $claim->updated_at = Carbon\Carbon::now()->subDays($count)->toDateTimeString();
-            $claim->member_id = $claimData[0];
+            $claim->member_id = $member->id;
             $claim->diagnosis_code = $claimData[1];
             $claim->total_amount = $claimData[2];
             $claim->amount_paid = $claimData[3];
