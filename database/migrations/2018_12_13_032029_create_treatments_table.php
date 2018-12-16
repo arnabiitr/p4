@@ -31,17 +31,4 @@ class CreateTreatmentsTable extends Migration
     }
 
 
-    /**    public function up()
-    {
-    Schema::create('diagnosis_code', function (Blueprint $table) {
-    $table->increments('id');
-    $table->timestamps();
-    $table->string('diacode');
-    });
-    }
-
-     *
-     *
-     *
-     */
 }

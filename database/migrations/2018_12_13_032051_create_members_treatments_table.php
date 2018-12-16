@@ -33,6 +33,6 @@ class CreateMembersTreatmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members_treatments');
+        Schema::dropIfExists('member_treatment');
     }
 }
