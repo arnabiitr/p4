@@ -26,7 +26,7 @@
     </form>
 
     @if($searchTerm ||$searchTerm1)
-        <h2>Results for query: <em>{{ $searchTerm }}{{ $searchTerm1 }}</em></h2>
+        <h2>Results for query: <em>{{ $searchTerm }} {{ $searchTerm1 }}</em></h2>
 
         @if(count($searchResults) == 0)
             No matches found.
