@@ -11,7 +11,7 @@
     <form method='GET' action='/claims/search-process'>
 
         <fieldset>
-            <label for='searchTerm'>Search by Diagnosis Code:(e.g AR,BR,ER)</label>
+            <label for='searchTerm'>Search by Diagnosis Code:(e.g ER,GH,AD,ABC,CD,AR,BR,ER)</label>
             <input type='text' name='searchTerm' id='searchTerm' value='{{ $searchTerm }}'>
 
             <input type='checkbox' name='caseSensitive' {{ ($caseSensitive) ? 'checked' : '' }}>

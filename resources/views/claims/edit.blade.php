@@ -25,7 +25,7 @@
             <div class='details'>* Required fields</div>
             {{ csrf_field() }}
 
-            <label for='diagnosis_code'>* Diagnosis Code( eg. AR , BR , ER)</label>
+            <label for='diagnosis_code'>* Diagnosis Code( eg.ER,GH,AD,ABC,CD,AR,BR,ER)</label>
             <input type='text' name='diagnosis_code' id='diagnosis_code' value='{{ old('diagnosis_code',$claim->diagnosis_code)}}'>
             @include('modules.field-error', ['field' => 'diagnosis_code'])
 

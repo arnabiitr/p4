@@ -109,7 +109,7 @@ class ClaimController extends Controller
         $request->validate([
             'total_amount' => 'numeric|required',
             'amount_paid' =>  'numeric|required',
-            'diagnosis_code'=>'required|in:AR,BR,ER',
+            'diagnosis_code'=>'required|in:ER,GH,AD,ABC,CD,AR,BR,ER',
             'status'=>'required|numeric|in:0,1,2'
 
 
@@ -162,7 +162,7 @@ class ClaimController extends Controller
          $request->validate([
             'total_amount' => 'numeric|required',
             'amount_paid' =>  'numeric|required',
-             'diagnosis_code'=>'required|in:AR,BR,ER',
+             'diagnosis_code'=>'required|in:ER,GH,AD,ABC,CD,AR,BR,ER',
              'status'=>'required|numeric|in:0,1,2'
 
         ]);
