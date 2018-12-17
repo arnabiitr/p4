@@ -37,8 +37,9 @@
                     <h4>first name :{{ $member->first_name }}</h4>
                     <h4>las name :  {{ $member->last_name}}</h4>
                     <h4>Address:  {{ $member->address}}</h4>
+                    <h4>Claims: </h4>
                     @foreach (($member->claim) as $claimobject)
-                        <li>Claim #{{ $claimobject->id}}</li>
+                        <h5>Claim #{{ $claimobject->id}}</h5>
                     @endforeach
 
 
