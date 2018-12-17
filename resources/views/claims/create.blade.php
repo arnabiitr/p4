@@ -23,7 +23,7 @@
         @include('modules.field-error', ['field' => 'diagnosis_code'])
 
 <label for='member_id'>* Member_id</label>
-        <select name='member_id'>
+        <select name='member_id' id='member_id'>
             <option value=''>Choose one...</option>
             @foreach($members as $member)
                 <option value='{{ $member->id }}' {{ (old('member_id') == $member->id) ? 'selected' : '' }}>{{ $member->first_name.' '.$member->last_name.' ('.$member->id .')'}}</option>
