@@ -22,7 +22,6 @@
 
 <header>
     <a href='/'><img src='/images/sprite.png'  height="40"  border="0" id='logo' alt='p4 Logo'></a>
-    <strong>Claim Management System</strong>
     @include('modules.nav')
 </header>
 
