@@ -32,18 +32,25 @@
             No matches found.
         @else
             @foreach($searchResults as $membername => $member)
-                <div class='member'>
-                    <h3>member_id : {{ $member->id}}</h3>
-                    <h4>first name :{{ $member->first_name }}</h4>
-                    <h4>las name :  {{ $member->last_name}}</h4>
-                    <h4>Address:  {{ $member->address}}</h4>
-                    <h4>Claims: </h4>
-                    @foreach (($member->claim) as $claimobject)
-                        <h5>Claim #{{ $claimobject->id}}</h5>
-                    @endforeach
-
-
-                </div>
+                <table class="members-table">
+                    <tr><th class="td150">Address</th>
+                        <th>Insurance ID</th>
+                        <th>Insurance Expiration</th>
+                        <th>D.O.B.</th>
+                        <th>SSN</th>
+                        <th>Claims</th>
+                    </tr>
+                    <tr>
+                        <td>{{ $member->address}}</td>
+                        <td>{{ $member->insurance_id}}</td>
+                        <td>{{ $member->insurance_expiration_date}}</td>
+                        <td>{{ $member->dob}}</td>
+                        <td>{{ $member->ssn}}</td>
+                        <td>        @foreach (($member->claim) as $claimobject)
+                                <li>Claim #{{ $claimobject->id}}</li>
+                            @endforeach</td>
+                    </tr>
+                </table>
             @endforeach
         @endif
     @endif
