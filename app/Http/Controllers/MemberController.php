@@ -123,8 +123,8 @@ class MemberController extends Controller
             'last_name' => 'required|string|max:255|regex:/(^([a-zA-Z]+)(\d+)?$)/u',
             'ssn' => 'required',
             'insurance_id' => 'required|alpha_num',
-            'insurance_expiration_date' => 'required|integer|min:2019',
-            'dob'=>'required|integer|min:1910'
+            'insurance_expiration_date' => 'required|numeric|digits:4|min:2019',
+            'dob'=>'required|numeric|digits:4|min:1910'
         ],
         [
         'insurance_expiration_date.min' => 'Insurance expiry year should be later than 2018',
@@ -185,8 +185,8 @@ class MemberController extends Controller
             'last_name' => 'required|string|max:255|regex:/(^([a-zA-Z]+)(\d+)?$)/u',
             'ssn' => 'required',
             'insurance_id' => 'required|alpha_num',
-            'insurance_expiration_date' => 'required|integer|min:2019',
-            'dob'=>'required|integer|min:1910'
+            'insurance_expiration_date' => 'required|numeric|digits:4|min:2019',
+            'dob'=>'required|numeric|digits:4|min:1910'
         ],
             [
                 'insurance_expiration_date.min' => 'Insurance expiry year should be later than 2018',
