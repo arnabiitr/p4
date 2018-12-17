@@ -34,7 +34,7 @@ __Update__
   + Observe confirmation message
   
 __Delete__
-  + Visit <http://p4.dwa-fall2018-arnab.me/members/>; choose the Delete button next to one of the Member Name hyperlinks
+  + Visit <http://p4.dwa-fall2018-arnab.me/members/> choose the Delete button next to one of the Member Name hyperlinks
   + Confirm deletion
   + Observe confirmation message
  
@@ -50,13 +50,13 @@ __Delete__
    + Visit <http://p4.dwa-fall2018-arnab.me/claims/> see a listing of all claims
    
  __Update__
-   + Visit <http://p4.dwa-fall2018-arnab.me/claims/>; choose the Edit button next to one of the claims
+   + Visit <http://p4.dwa-fall2018-arnab.me/claims/> choose the Edit button next to one of the claims
    + Make some edit to form
    + Click *Save changes*
    + Observe confirmation message
    
  __Delete__
-   + Visit <http://p4.dwa-fall2018-arnab.me/claims/>; choose the Delete button next to one of the claims
+   + Visit <http://p4.dwa-fall2018-arnab.me/claims/> choose the Delete button next to one of the claims
    + Confirm deletion
    + Observe confirmation message
 
