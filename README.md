@@ -28,7 +28,7 @@ __Read__
   + Visit <http://p4.dwa-fall2018-arnab.me/members/> see a listing of all books
   
 __Update__
-  + Visit <http://p4.dwa-fall2018-arnab.me/members/>; choose the Edit button next to one of the Member Name hyperlinks
+  + Visit <http://p4.dwa-fall2018-arnab.me/members/> choose the Edit button next to one of the Member Name hyperlinks
   + Make some edit to form
   + Click *Save changes*
   + Observe confirmation message
