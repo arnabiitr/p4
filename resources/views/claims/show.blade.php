@@ -14,7 +14,8 @@
     <h1><strong>Claim Id:</strong>{{ $claim->id }}</h1>
 
     <div class='member cf'>
-        <p><strong>Claim Details</strong> {{ $claim->diagnosis_code }} ({{ $claim->total_amount}})</p>
+        <p><strong>Claim Diagnosis Code: </strong> {{ $claim->diagnosis_code }} </p>
+        <p><strong>Claim Diagnosis Amount: </strong>  ({{ $claim->total_amount}})</p>
         <p><strong>Added:</strong>{{ $claim->created_at->format('m/d/y') }}</p>
 
 
