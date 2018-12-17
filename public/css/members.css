@@ -24,7 +24,7 @@ body {
 }
 
 section#main {
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     margin: auto;
     padding-bottom: 20px;
@@ -207,4 +207,15 @@ Misc
 
 .cf {
     *zoom: 1;
+}
+
+.members-table {
+    border-collapse: none!important;
+    border: none;
+    padding: 15px;
+    width: 100%;
+}
+
+.td150 {
+    width: 150px;
 }
