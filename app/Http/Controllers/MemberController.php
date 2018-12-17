@@ -87,11 +87,6 @@ class MemberController extends Controller
             $searchResults=Member::where('last_name',$searchTerm1)->get();
         }
 
-    //   dump($searchResults);
-
-
-        # Redirect back to the search page w/ the searchTerm *and* searchResults (if any) stored in the session
-        # Ref: https://laravel.com/docs/redirects#redirecting-with-flashed-session-data
         return redirect('/members/search')->with([
             'searchTerm' => $searchTerm,
             'searchTerm1' => $searchTerm1,
@@ -124,29 +119,27 @@ class MemberController extends Controller
 
         # Validate the request data
         $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'first_name' => 'required|string|max:255|regex:/(^([a-zA-Z]+)(\d+)?$)/u',
+            'last_name' => 'required|string|max:255|regex:/(^([a-zA-Z]+)(\d+)?$)/u',
             'ssn' => 'required',
-            'insurance_id' => 'required',
-            'insurance_expiration_date' => 'required',
-            'dob'=>'required'
-        ]);
+            'insurance_id' => 'required|alpha_num',
+            'insurance_expiration_date' => 'required|digits:4|min:20119',
+            'dob'=>'required|digits:4|min:1910'
+        ],
+        [
+        'insurance_expiration_date.min' => 'Insurance expiry year should be later than 2018',
+            'dob.min' => 'DOB  year should be later than 1910'
+            ]);
 
         $member = new Member();
         $member->first_name = $request->first_name;
-
-
         $member->last_name = $request->last_name;
-
         $member->ssn= $request->ssn;
         $member->address = $request->address;
         $member->insurance_id = $request->insurance_id;
         $member->insurance_expiration_date = $request->insurance_expiration_date;
         $member->dob = $request->dob;
         $member->save();
-
-        # Note: Have to sync treatments *after* the member has been saved so there's a member_id to store in the pivot table
-       //  dump($request->treatments);
 
          $member->treatments()->sync($request->treatments);
 
@@ -188,13 +181,18 @@ class MemberController extends Controller
 
         # Validate the request data
         $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'first_name' => 'required|string|max:255|regex:/(^([a-zA-Z]+)(\d+)?$)/u',
+            'last_name' => 'required|string|max:255|regex:/(^([a-zA-Z]+)(\d+)?$)/u',
             'ssn' => 'required',
-            'insurance_id' => 'required',
-            'insurance_expiration_date' => 'required',
-            'dob'=>'required'
-        ]);
+            'insurance_id' => 'required|alpha_num',
+            'insurance_expiration_date' => 'required|digits:4|min:2019',
+            'dob'=>'required|digits:4|min:1910'
+        ],
+            [
+                'insurance_expiration_date.min' => 'Insurance expiry year should be later than 2018',
+                'dob.min' => 'DOB  year should be later than 1910'
+            ]
+            );
 
         $member = Member::find($id);
         $member->first_name = $request->first_name;
@@ -252,4 +250,6 @@ class MemberController extends Controller
             'alert' => '“' . $member->first_name . '” was removed.'
         ]);
     }
+
+
 }

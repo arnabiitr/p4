@@ -106,9 +106,14 @@ class ClaimController extends Controller
 
 
         # Validate the request data
-/*        $request->validate([
+        $request->validate([
+            'total_amount' => 'numeric|required',
+            'amount_paid' =>  'numeric|required',
+            'diagnosis_code'=>'required|in:AR,BR,ER',
+            'status'=>'required|numeric|in:0,1,2'
 
-        ]);*/
+
+        ]);
 
         $claim = new Claim();
         $claim->member_id = $request->member_id;
@@ -157,6 +162,8 @@ class ClaimController extends Controller
          $request->validate([
             'total_amount' => 'numeric|required',
             'amount_paid' =>  'numeric|required',
+             'diagnosis_code'=>'required|in:AR,BR,ER',
+             'status'=>'required|numeric|in:0,1,2'
 
         ]);
 

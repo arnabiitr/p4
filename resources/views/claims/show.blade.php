@@ -11,11 +11,11 @@
 @endpush
 
 @section('content')
-    <h1>{{ $claim->id }}</h1>
+    <h1><strong>Claim Id:</strong>{{ $claim->id }}</h1>
 
     <div class='member cf'>
-        <p>Claim Details {{ $claim->diagnosis_code }} ({{ $claim->total_amount}})</p>
-        <p>Added {{ $claim->created_at->format('m/d/y') }}</p>
+        <p><strong>Claim Details</strong> {{ $claim->diagnosis_code }} ({{ $claim->total_amount}})</p>
+        <p><strong>Added:</strong>{{ $claim->created_at->format('m/d/y') }}</p>
 
 
         <ul class='memberActions'>

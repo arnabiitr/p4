@@ -18,10 +18,10 @@
         <ul>
             @foreach($newClaims as $claim)
                 <li> &nbsp;</li>
-                <li>Claim ID# :{{ $claim->id}}</li>
-                <li>Diagnosis Code :{{ $claim->diagnosis_code}}</li>
-                <li>Member Id :{{ $claim->member_id}}</li>
-                <li>Member Name :{{ $claim->members->first_name}} {{ $claim->members->last_name}} </li>
+                <li><strong>Claim ID# :</strong>{{ $claim->id}}</li>
+                <li><strong>Diagnosis Code :</strong>{{ $claim->diagnosis_code}}</li>
+                <li><strong>Member Id :</strong>{{ $claim->member_id}}</li>
+                <li><strong>Member Name :</strong>{{ $claim->members->first_name}} {{ $claim->members->last_name}} </li>
                 <li>  &nbsp;  </li>
 
             @endforeach

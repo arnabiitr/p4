@@ -42,7 +42,7 @@
                value='{{ old('amount_paid') }}'>
         @include('modules.field-error', ['field' => 'amount_paid'])
 
-        <label for='status'>* Status </label>
+        <label for='status'>* Status (0 - Closed , 1 - In Progress, 2 - Paid) </label>
         <input type='text'
                name='status'
                id='status'

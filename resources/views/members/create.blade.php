@@ -37,11 +37,11 @@
         <input type='text' name='insurance_id' id='insurance_id' value='{{ old('insurance_id') }}'>
         @include('modules.field-error', ['field' => 'insurance_id'])
 
-        <label for='dob'>* DOB( Year 4 Digits only e.g 1979) #</label>
+        <label for='dob'>* DOB( Year 4 Digits only e.g 1979 & min year accepted > 1910) #</label>
         <input type='text' name='dob' id='dob' value='{{ old('dob') }}'>
         @include('modules.field-error', ['field' => 'dob'])
 
-        <label for='insurance_expiration_year'>* Insurance Expiration Date( Year 4 Digits only e.g 2022)</label>
+        <label for='insurance_expiration_year'>* Insurance Expiration ( Year 4 Digits only e.g 2022 & min accepted >2018)</label>
         <input type='text'
                name='insurance_expiration_date'
                id='insurance_expiration_date'

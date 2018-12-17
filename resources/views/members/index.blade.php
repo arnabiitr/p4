@@ -14,7 +14,7 @@
         <h2>Recently added members</h2>
         <ul>
             @foreach($newMembers as $member)
-                <li>{{ $member->first_name }}</li>
+                <li>{{ $member->first_name }} {{ $member->last_name }}</li>
             @endforeach
         </ul>
     </section>

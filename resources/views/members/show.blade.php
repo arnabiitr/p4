@@ -15,7 +15,7 @@
 
     <div class='member cf'>
 
-        <p>Member Name{{ $member->first_name }} ({{ $member->dob }})</p>
+        <p><strong>Member Name:{{ $member->first_name }}</strong> ({{ $member->dob }})</p>
         <p>Member Created Date  {{ $member->created_at->format('m/d/y') }}</p>
 
 
