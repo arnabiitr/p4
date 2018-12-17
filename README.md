@@ -17,6 +17,7 @@ Pivot table(s):
 ## CRUD
 
 Member Operations
+
 __Create__
   + Visit <http://p4.dwa-fall2018-arnab.me/members/create>
   + Fill out form
@@ -38,6 +39,7 @@ __Delete__
   + Observe confirmation message
  
  Claim  Operations
+ 
  __Create__
    + Visit <http://p4.dwa-fall2018-arnab.me/claims/create>
    + Fill out form
