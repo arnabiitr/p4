@@ -31,11 +31,11 @@
         </select>
         @include('modules.field-error', ['field' => 'member_id'])
 
-        <label for='total_amount'>* Total Claim Amount </label>
+        <label for='total_amount'>* Total Claim Amount $</label>
         <input type='text' name='total_amount' id='total_amount' value='{{ old('total_amount') }}'>
         @include('modules.field-error', ['field' => 'total_amount'])
 
-        <label for='amount_paid'>* Total Amount Paid</label>
+        <label for='amount_paid'>* Total Amount Paid $</label>
         <input type='text'
                name='amount_paid'
                id='amount_paid'
