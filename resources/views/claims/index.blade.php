@@ -5,8 +5,8 @@
 @endsection
 
 @push('head')
-    <link href='/css/members/index.css' rel='stylesheet'>
-    <link href='/css/members/_members.css' rel='stylesheet'>
+    <link href='/css/members/index.css?12345' rel='stylesheet'>
+    <link href='/css/members/_members.css?12345' rel='stylesheet'>
 
 @endpush
 
