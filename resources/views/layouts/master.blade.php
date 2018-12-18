@@ -27,7 +27,7 @@
 </header>
 
 <section id='main'>
-    <h1>------</h1>
+    {{--<h1>------</h1>--}}
     @yield('content')
 </section>
 
