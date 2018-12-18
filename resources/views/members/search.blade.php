@@ -48,7 +48,7 @@
                             {{--<ul>--}}
                             @foreach (($member->claim) as $claimobject)
                                 {{--<li>--}}
-                                Claim #{{ $claimobject->id}}</br>
+                               Claim #{{ $claimobject->id}}<br/>
                                 {{--</li>--}}
                             @endforeach
 {{--                            </ul>--}}
