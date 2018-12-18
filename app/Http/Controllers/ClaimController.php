@@ -211,7 +211,7 @@ class ClaimController extends Controller
         $claim->delete();
 
         return redirect('/claims')->with([
-            'alert' => '“' . $claim->id . '” was removed.'
+            'alert' => '“Claim:' . $claim->id . '” was removed.'
         ]);
     }
 }
