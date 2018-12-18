@@ -6,8 +6,8 @@
             <th style="width: 5px;">Insurance ID</th>
             <th style="width: 15px;">Insurance Expiration</th>
             <th style="width: 15px;">D.O.B.</th>
-            <th style="width: 15px;">SSN</th>
-            <th class="td150">Claims</th>
+            <th style="width: 35px;">SSN</th>
+            <th style="width: 35px;text-align:center">Claims</th>
         </tr>
         <tr>
             <td>{{ $member->address}}</td>
