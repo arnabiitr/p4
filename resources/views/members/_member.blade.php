@@ -2,12 +2,12 @@
     <a href='/members/{{ $member->id }}'><h3>{{ $member->first_name }}</h3></a>
 
     <table class="members-table">
-        <tr><th class="td150">Address</th>
-            <th>Insurance ID</th>
-            <th>Insurance Expiration</th>
-            <th>D.O.B.</th>
-            <th>SSN</th>
-            <th>Claims</th>
+        <tr><th style="width: 15px;">Address</th>
+            <th style="width: 5px;">Insurance ID</th>
+            <th style="width: 15px;">Insurance Expiration</th>
+            <th style="width: 15px;">D.O.B.</th>
+            <th style="width: 15px;">SSN</th>
+            <th class="td150">Claims</th>
         </tr>
         <tr>
             <td>{{ $member->address}}</td>
@@ -20,20 +20,5 @@
                 @endforeach</td>
         </tr>
     </table>
-<!-- <ul>
 
-
-
-        <li><strong>Address: </strong>{{ $member->address}}</li>
-        <li><strong>Insurance_Id:</strong> {{ $member->insurance_id}}</li>
-        <li><strong>Insurance_expiration: </strong>{{ $member->insurance_expiration_date}}</li>
-        <li><strong>D.O.B:</strong>{{ $member->dob}}</li>
-        <li><strong>SSN:</strong> {{ $member->ssn}}</li>
-
-
-        <strong> <li>Claims:</li></strong>
-
-
-
-    </ul>-->
 </div>

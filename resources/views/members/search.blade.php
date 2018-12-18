@@ -38,7 +38,7 @@
                         <th>Insurance Expiration</th>
                         <th>D.O.B.</th>
                         <th>SSN</th>
-                        <th>Claims</th>
+                        <th class="td150">Claims</th>
                     </tr>
                     <tr>
                         <td>{{ $member->address}}</td>
