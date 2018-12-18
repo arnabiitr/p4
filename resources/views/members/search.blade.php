@@ -16,8 +16,6 @@
 
             <label for='searchTerm1'>Search by last name</label>
             <input type='text' name='searchTerm1' id='searchTerm1' value='{{ $searchTerm1 }}'>
-
-            <input type='checkbox' name='caseSensitive' {{ ($caseSensitive) ? 'checked' : '' }}>
             <label>case sensitive</label>
         </fieldset>
 
@@ -47,11 +45,13 @@
                         <td>{{ $member->dob}}</td>
                         <td>{{ $member->ssn}}</td>
                         <td>
-                            <ul>
+                            {{--<ul>--}}
                             @foreach (($member->claim) as $claimobject)
-                                <li>Claim #{{ $claimobject->id}}</li>
+                                {{--<li>--}}
+                                Claim #{{ $claimobject->id}}</br>
+                                {{--</li>--}}
                             @endforeach
-                            </ul>
+{{--                            </ul>--}}
                         </td>
                     </tr>
                 </table>

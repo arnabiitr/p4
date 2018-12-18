@@ -13,8 +13,6 @@
         <fieldset>
             <label for='searchTerm'>Search by Diagnosis Code:(e.g ER,GH,AD,ABC,CD,AR,BR,ER)</label>
             <input type='text' name='searchTerm' id='searchTerm' value='{{ $searchTerm }}'>
-
-            <input type='checkbox' name='caseSensitive' {{ ($caseSensitive) ? 'checked' : '' }}>
             <label>case sensitive</label>
         </fieldset>
 
