@@ -10,14 +10,6 @@
 @endpush
 
 @section('content')
-    <section id='newMembers'>
-        <h2>Recently added members</h2>
-        <ul>
-            @foreach($newMembers as $member)
-                <li>{{ $member->first_name }} {{ $member->last_name }}</li>
-            @endforeach
-        </ul>
-    </section>
 
     <section id='allMembers'>
         <h2>All Members</h2>
