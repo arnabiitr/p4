@@ -21,11 +21,20 @@ Member Operations
 __Create__
   + Visit <http://p4.dwa-fall2018-arnab.me/members/create>
   + Fill out form
+  + First Name : Alphanumeric No Special Characters Allowed
+  + Last Name : Alphanumeric No Special Characters Allowed
+  + SSN :Alphanumeric (Didn't put a length or type limitation since it can vary by state /country /region)
+  +Insurance ID card :Alphanumeric
+  +DOB :4 digits of Birth Year ( e.g 1979) has to be greater than 1910 else is not accepted 
+  +Insurance expiration : 4 digits of expiring year should be greater than 2018 else is not accepted 
+  Address: Alphanumeric 
+  Treatments : Optional ( Refers to any existing treatments the patient has had before )
+  
   + Click *Add new Member*
   + Observe confirmation message
   
 __Read__
-  + Visit <http://p4.dwa-fall2018-arnab.me/members/> see a listing of all books
+  + Visit <http://p4.dwa-fall2018-arnab.me/members/> see a listing of all Members
   
 __Update__
   + Visit <http://p4.dwa-fall2018-arnab.me/members/> choose the Edit button next to one of the Member Name hyperlinks
@@ -43,6 +52,11 @@ __Delete__
  __Create__
    + Visit <http://p4.dwa-fall2018-arnab.me/claims/create>
    + Fill out form
+   + Diagnosis Code ( Should be in this range ER,GH,AD,ABC,CD,AR,BR,ER)
+   + Claim Amount: Numeric
+   + Total Amount Paid : Numeric
+   + Status (0 - CLOSED , 1 - IN PROGRESS, 2 - PAID)
+   
    + Click *Add new Claim*
    + Observe confirmation message
    

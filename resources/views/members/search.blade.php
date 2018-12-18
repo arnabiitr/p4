@@ -33,12 +33,12 @@
         @else
             @foreach($searchResults as $membername => $member)
                 <table class="members-table">
-                    <tr><th class="td150">Address</th>
-                        <th>Insurance ID</th>
-                        <th>Insurance Expiration</th>
-                        <th>D.O.B.</th>
-                        <th>SSN</th>
-                        <th class="td150">Claims</th>
+                    <tr><th style="width: 15px;">Address</th>
+                        <th style="width: 5px;">Insurance ID</th>
+                        <th style="width: 15px;">Insurance Expiration</th>
+                        <th style="width: 15px;">D.O.B.</th>
+                        <th style="width: 35px;">SSN</th>
+                        <th style="width: 35px;text-align:center">Claims</th>
                     </tr>
                     <tr>
                         <td>{{ $member->address}}</td>

@@ -15,9 +15,12 @@
             <td>{{ $member->insurance_expiration_date}}</td>
             <td>{{ $member->dob}}</td>
             <td>{{ $member->ssn}}</td>
-            <td><ul>        @foreach (($member->claim) as $claimobject)
+            <td><ul>
+                @foreach (($member->claim) as $claimobject)
                     <li>Claim #{{ $claimobject->id}}</li>
-                @endforeach</ul></td>
+                @endforeach
+                </ul>
+            </td>
         </tr>
     </table>
 
