@@ -26,6 +26,11 @@
     @include('modules.nav')
 </header>
 
+<section id='main'>
+    <h1>------</h1>
+    @yield('content')
+</section>
+
 <footer>
     <a href='https://github.com/arnabiitr/p4'><i class='fab fa-github'></i> View on Github</a> |
     &copy; {{ date('Y') }}
