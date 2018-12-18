@@ -13,7 +13,7 @@
         <fieldset>
             <label for='searchTerm'>Search by Diagnosis Code:(e.g ER,GH,AD,ABC,CD,AR,BR,ER)</label>
             <input type='text' name='searchTerm' id='searchTerm' value='{{ $searchTerm }}'>
-            <label>case sensitive</label>
+
         </fieldset>
 
         <input type='submit' value='Search' class='btn btn-primary'>

@@ -16,7 +16,7 @@
 
             <label for='searchTerm1'>Search by last name</label>
             <input type='text' name='searchTerm1' id='searchTerm1' value='{{ $searchTerm1 }}'>
-            <label>case sensitive</label>
+
         </fieldset>
 
         <input type='submit' value='Search' class='btn btn-primary'>
