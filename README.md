@@ -16,14 +16,14 @@ Pivot table(s):
 
 ## CRUD
 
-Member Operations
+##Member Operations
 
 __Create__
   + Visit <http://p4.dwa-fall2018-arnab.me/members/create>
-  + Fill out form
+  + Fill out form with the following fields
   + First Name : Alphanumeric No Special Characters Allowed
   + Last Name : Alphanumeric No Special Characters Allowed
-  + SSN :Alphanumeric (Didn't put a length or type limitation since it can vary by state /country /region)
+  + SSN :Alphanumeric (Didn't put a length or type /format limitation since it can vary by state /country /region)
   + Insurance ID card :Alphanumeric
   + DOB :4 digits of Birth Year ( e.g 1979) has to be greater than 1910 else is not accepted 
   + Insurance expiration : 4 digits of expiring year should be greater than 2018 else is not accepted 
@@ -47,7 +47,7 @@ __Delete__
   + Confirm deletion
   + Observe confirmation message
  
- Claim  Operations
+## Claim  Operations
  
  __Create__
    + Visit <http://p4.dwa-fall2018-arnab.me/claims/create>
