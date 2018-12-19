@@ -16,8 +16,8 @@
     <div class='membercenter cf'>
 
         <p><strong>Member Name:</strong>{{ $member->first_name }} {{ $member->last_name }}</p>
-        <p>  DOB:<strong>{{ $member->dob }}</strong></p>
-        <p>Member Created Date  {{ $member->created_at->format('m/d/y') }}</p>
+        <p><strong>DOB:</strong>{{ $member->dob }}</p>
+        <p><strong>Created Date</strong>{{ $member->created_at->format('m/d/y') }}</p>
 
 
 
