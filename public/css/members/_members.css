@@ -25,3 +25,11 @@
     border: 1px solid black;
     margin-right: 10px;
 }
+
+.membercenter {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+}

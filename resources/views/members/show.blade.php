@@ -13,9 +13,10 @@
 @section('content')
     <h1>{{ $member->first_name }}</h1>
 
-    <div class='member cf'>
+    <div class='membercenter cf'>
 
-        <p><strong>Member Name:{{ $member->first_name }}</strong> ({{ $member->dob }})</p>
+        <p><strong>Member Name:</strong>{{ $member->first_name }} {{ $member->last_name }}</p>
+        <p>  DOB:<strong>{{ $member->dob }}</strong></p>
         <p>Member Created Date  {{ $member->created_at->format('m/d/y') }}</p>
 
 
