@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Edit {{$member->first_name}}
+    Edit {{$member->first_name}} {{$member->last_name}}
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
         </div>
     @endif
 
-    <h1>Edit {{ $member->first_name }}</h1>
+    <h1>Edit {{ $member->first_name }} {{$member->last_name}}</h1>
 
     <form method='POST' action='/members/{{ $member->id }}'>
         <div class='details'>* Required fields</div>

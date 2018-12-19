@@ -1,5 +1,5 @@
 <div class='member cf'>
-    <a href='/claims/{{$claim->id }}'><h3>Claim Id#{{ $claim->id }}</h3></a>
+    <a href='/claims/{{$claim->id }}'><h3>Claim Id#  {{ $claim->id }}</h3></a>
     <ul>
 
         <li><strong>Diagnosis Code :</strong>{{ $claim->diagnosis_code}}</li>
