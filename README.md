@@ -28,7 +28,7 @@ __Create__
   + DOB :4 digits of Birth Year ( e.g 1979) has to be greater than 1910 else is not accepted 
   + Insurance expiration : 4 digits of expiring year should be greater than 2018 else is not accepted 
   + Address: Alphanumeric 
-  + Treatments : Optional ( Refers to any existing treatments the patient has had before )
+  + Treatments : Optional Mutliselect ( Refers to any existing treatments the patient has had before )
   
   + Click *Add new Member*
   + Observe confirmation message
@@ -55,7 +55,7 @@ __Delete__
    + Diagnosis Code ( Should be in this range ER,GH,AD,ABC,CD,AR,BR,ER)
    + Claim Amount: Numeric
    + Total Amount Paid : Numeric
-   + Status (0 - CLOSED , 1 - IN PROGRESS, 2 - PAID)
+   + Status Digit (0 - CLOSED , 1 - IN PROGRESS, 2 - PAID)
    
    + Click *Add new Claim*
    + Observe confirmation message
