@@ -1,5 +1,5 @@
 <div class='member cf'>
-    <a href='/members/{{ $member->id }}'><h3>{{ $member->first_name }}</h3></a>
+    <a href='/members/{{ $member->id }}'><h3>{{ $member->first_name }} {{ $member->last_name }}</h3></a>
 
     <table class="members-table">
         <tr><th style="width: 15px;">Address</th>
